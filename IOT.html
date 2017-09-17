@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang='en'>
+
+<head>
+  <meta charset='utf-8' />
+  <title>IOT Demo</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Bitter|Muli" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/browser_reset.css" type="text/css"/>
+  <link rel="stylesheet" href="css/main.css" type="text/css"/>
+
+  <img id = "preload"/>
+
+  <script type = "text/javascript" src = "LogoBar.js"></script>
+
+  <style>
+      body, html {
+        height: 100%;
+        width: 100%;
+      }
+      #map {
+        height: 100%;
+        width: 100%;
+       }
+  </style>
+
+</head>
+
+<body onload = "runBitShiftAnimation()">
+  <nav>
+    <ul>
+        <li>
+          <a onmouseover = "mouseOver(this)" onmouseout = "mouseOut(this)" href='index.html'>Overview</a>
+        </li>
+        <li>
+          <a onmouseover = "mouseOver(this)" onmouseout = "mouseOut(this)" href='Team.html'>Our Team</a>
+        </li>
+        <li>
+          <a onmouseover = "mouseOver(this)" onmouseout = "mouseOut(this)" href='IOT.html'>IOT Demo</a>
+        </li>
+    </ul>
+  </nav>
+
+  <div id='map'></div>
+  <script>
+      function initMap() {
+        var htnBin = {lat: 43.468401365, lng: -80.54136974};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: htnBin
+        });
+        var marker = new google.maps.Marker({
+          position: htnBin,
+          map: map
+        });
+        var contentString = '<div id="content">'+
+     '<div id="siteNotice">'+
+     '</div>'+
+     '<h4>First Bin</h4>'+
+     '<div id="bodyContent">'+
+     '<p>Condition: Good</p>'+
+     '<p>Fullness: -- </p>'+
+     '</div>'+
+     '</div>';
+
+        var infowindow = new google.maps.InfoWindow({
+         content: contentString
+        });
+
+        var marker = new google.maps.Marker({
+         position: htnBin,
+         map: map,
+         title: 'First Bin'
+        });
+        marker.addListener('click', function() {
+         infowindow.open(map, marker);
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeuH23j_G77TL5AFE9iXcHXjM2roll8D8&callback=initMap">
+    </script>
+
+</body>
+
+</html>

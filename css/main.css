@@ -13,7 +13,7 @@ h1 {
 h2 {
 	font-family: 'Bitter', serif;
 	font-size: 1.5em;
-	margin-bottom: 2%;
+	margin-bottom: 3%;
 }
 
 h3 {
@@ -86,6 +86,44 @@ nav li a:hover, nav li a:active {
 	text-decoration: none;
   padding: 2vh 2.3vh;
 	overflow: hidden;
+}
+
+.column{
+	position: relative;
+	-webkit-column-count: 4; /* Chrome, Safari, Opera */
+    -moz-column-count: 4; /* Firefox */
+    column-count: 4;
+    -webkit-column-gap: 25%; /* Chrome, Safari, Opera */
+    -moz-column-gap: 25%; /* Firefox */
+    column-gap: 25%;
+    -webkit-column-rule-style: solid; /* Chrome, Safari, Opera */
+    -moz-column-rule-style: solid; /* Firefox */
+    -webkit-column-rule-width: 1px; /* Chrome, Safari, Opera */
+    -moz-column-rule-width: 1px; /* Firefox */
+    -webkit-column-rule-color: white; /* Chrome, Safari, Opera */
+    -moz-column-rule-color: white; /* Firefox */
+    column-rule-color: white;
+    column-rule-width: 1px;						/*get rid of width when done debugging*/
+    column-rule-style: solid;
+    z-index: 2;
+}
+
+.member {
+	font-family: 'Muli', sans-serif;
+	font-size: 0.9em;
+ 	display: block;
+ 	float: center;
+}
+
+#TeamInfo{
+	position: relative;
+	padding: 2em 1em;
+	height: 5em;
+	color: #FFFFFF;
+	text-align: center;
+    min-height: auto;
+    background-color: #32775F;
+	z-index: 2;
 }
 
 #bits {						/*js animation using bits <p> tag*/
