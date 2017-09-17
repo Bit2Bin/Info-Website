@@ -43,7 +43,7 @@ h4 {
 }
 @media (min-width:768px)  { /* tablet*/
 	.upBit{
-		margin-bottom: 9px;
+		margin-bottom: 8px;
 	}
 }
 @media (min-width:1224px) { /* laptops, and desktops */
@@ -199,12 +199,12 @@ nav li a:hover, nav li a:active {
 }
 
 #sec3 {
+	position: relative;
 	background: url(../images/whitebg.png) no-repeat center right;
-	height: 15em;
 	background-size: contain;
 	padding: 3em 4em;
-	text-align: center;
 	z-index: 2;
+	text-align: center;
 }
 
 /*----divs for other pages----*/
