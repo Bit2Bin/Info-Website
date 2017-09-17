@@ -1,6 +1,6 @@
 body {
 	font-family: 'Muli', sans-serif;
-	font-size: 1.3em;
+	font-size: 1.4em;
 	color: #444;
 }
 
@@ -155,7 +155,7 @@ nav li a:hover, nav li a:active {
 }
 
 .content {
-	line-height: 150%;
+	line-height: 170%;
 	margin-bottom: 10px;
 }
 
